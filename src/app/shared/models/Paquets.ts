@@ -2,7 +2,7 @@ import {Clients} from './Clients';
 
 export class Paquets {
   idPaquets: number;
-  clientEnvoie: Clients;
+  clientEnvoie: Clients ;
   clientReceptionne: Clients;
   description: string;
   numeropack: string;

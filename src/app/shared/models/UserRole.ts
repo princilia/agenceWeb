@@ -4,7 +4,7 @@ import {User} from './User';
 
 export class UserRole {
   user: number;
-  role: number;
+  role: Role;
   dateDeb: Date;
   dateFin: Date;
 

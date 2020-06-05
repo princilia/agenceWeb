@@ -20,6 +20,7 @@ import {GroupeComponent} from './user/groupe/groupe.component';
 import {RoleComponent} from './user/role/role.component';
 import {UserrolesComponent} from './user/userroles/userroles.component';
 import {AuthGuard} from './auth.guard';
+import {ClientListComponent} from './client/client-list/client-list.component';
 
 const routes: Routes = [
   {
@@ -48,13 +49,16 @@ const routes: Routes = [
     component: ClientSendComponent
   },
   {
+    path: 'client-list',
+    component: ClientListComponent
+  },
+  {
     path: 'client-receive',
     component: ClientReceiveComponent
   },
   {
     path: 'login',
-    component: LoginComponent,
-    canActivate: [AuthGuard]
+    component: LoginComponent
   },
   {
     path: 'paquets',
@@ -62,7 +66,7 @@ const routes: Routes = [
   },
   {
     path: 'user',
-    component: UserComponent,
+    component: UserComponent
   },
   {
     path: 'user-list',

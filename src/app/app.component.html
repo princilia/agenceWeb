@@ -3,11 +3,14 @@
   <div class="navbar-nav"><a  routerLink="home"  class="nav-link" >Home
   </a>
   <ul class="navbar-nav">
-    <a  routerLink="deconnecter" routerLinkActive="active" class="nav-link" >Se Deconnecter
-    </a>
+    <div [ngSwitch] ="isloged()">
+      <a   *ngSwitchCase="true" routerLink="deconnecter" (click)="logout()"  class="nav-link" >Se Deconnecter
+      </a>
 
-    <a  routerLink="login" routerLinkActive="active"  class="nav-link" >Se connecter
-    </a>
+      <a  *ngSwitchCase="false" routerLink="login"   class="nav-link"  >Se connecter
+      </a>
+
+    </div>
   </ul>
   </div>
 </nav>
