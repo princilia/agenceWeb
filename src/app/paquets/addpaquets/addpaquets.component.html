@@ -1,0 +1,118 @@
+<form [formGroup]="paquetsForm" class="text-center border border-light p-5" (ngSubmit)="onSubmit(paquetsForm)"
+      xmlns="http://www.w3.org/1999/html">
+  <div  class="text-center border border-light p-5">
+
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Services Paquets </h3>
+    <div class="card-body" >
+      <!-- Search form -->
+<!--      <ul *ngFor=" let client of cliList ">-->
+<!--        <li>{{client.nom}}</li>-->
+<!--        <li>{{client.adresse}}</li>-->
+<!--      </ul>-->
+
+
+      <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" formControlName="rechcli" id="defaultCliFormRechcli"  placeholder="Recherche client" (keyup)="rechClient()" >
+<!--      <button type="button" (click)="rechClient()">recherche</button>-->
+      </div>
+
+
+      <label for="exampleFormControlSelect1" >Client Envoie</label>
+      <select class="custom-select custom-select-sm"  id="exampleFormControlSelect1" formControlName="clientEnvoie"  >
+        <option  *ngFor=" let client of cliList" [ngValue]="client" >{{client.nom}}</option>
+      </select>
+
+        <div >
+          <label for="exampleFormControlSelect2" >Client Receptionne</label>
+      <select class="custom-select custom-select-sm" id="exampleFormControlSelect2" formControlName="clientReceptionne" >
+        <option  *ngFor=" let client of cliList" [ngValue]="client" >{{client.nom}}</option>
+      </select>
+      </div>
+    </div>
+    <p>Pas encore client?
+      <button type="button" class="btn btn-secondary" (click)="addCLient()"  routerLink="client" >Add Client</button>
+    </p>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" formControlName="numeropack" id="defaultPaquetsFormNumeropack"  placeholder="Numeropack">
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" formControlName="description" id="defaultPaquetsFormDescription" placeholder="Description"
+      >
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">**</span>
+        </div>
+        <input type="text" class="form-control" formControlName="chargement" id="defaultPaquetsFormChargement" placeholder="Chargement"
+               aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a Chargement.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-3 mb-3">
+      <input type="text" class="form-control" formControlName="volume" id="defaultPaquetsFormVolume" placeholder="Volume" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <input type="date" class="form-control" formControlName="dateArriver" id="defaultPaquetsFormDateArriver" placeholder="dateEntree" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <input type="date" class="form-control" formControlName="dateEnvoie" id="defaultPaquetsFormDateEnvoie" placeholder="dateEnvoie" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <input type="date" class="form-control" formControlName="dateReception" id="defaultPaquetsFormDateReception" placeholder="dateReception" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label >Payement</label>
+      <div class="col-md-3 mb-3">
+    <div class="custom-control custom-radio">
+      <input type="radio" class="custom-control-input" formControlName="etatPaye" [value]="true" id="defaultGroupEtatPaye1" >
+      <label class="custom-control-label"  for="defaultGroupEtatPaye1">Oui</label>
+    </div>
+
+    <!-- Group of default radios - option 2 -->
+    <div class="custom-control custom-radio" >
+      <input type="radio" class="custom-control-input" formControlName="etatPaye" [value]="false" id="defaultGroupEtatPaye2" checked>
+      <label class="custom-control-label" for="defaultGroupEtatPaye2">Non</label>
+    </div>
+    </div>
+    </div>
+    <select class="custom-select"  formControlName="destination" >
+      <option value="KINSHASA_GOMBE">KINSHASA_GOMBE</option>
+      <option value="KINSHASA_MASINA">KINSHASA_MASINA</option>
+      <option value="BOMA">BOMA</option>
+      <option value="KINSHASA_MATONGE">KINSHASA_MATONGE</option>
+      <option value="KISANGANI">KISANGANI</option>
+      <option value="LUBUMBASHI">LUBUMBASHI</option>
+      <option value="MATADI">MATADI</option>
+    </select>
+  </div>
+
+  <div>
+  <button class="btn btn-primary" type="submit">Ajout Paquet</button>
+  </div>
+</form>

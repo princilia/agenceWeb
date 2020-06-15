@@ -1,0 +1,28 @@
+<!-- Default form login -->
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark border border-light p-3" >-->
+<!--  <div class="navbar-nav"><a [ngClass]="{rout:!isroute()}" routerLink="home"  class="nav-link" >-->
+<!--  </a>-->
+
+<!--    <button type="button" class="btn btn-primary" (click)="logout()">Se Deconnecter</button>-->
+<!--  </div>-->
+<!--</nav>-->
+<div class="alert alert-danger" *ngIf="mode==1">
+  <strong>Bad credentials </strong> Invalid  nom et password d'utilisateur
+</div>
+<div class="card" class="text-center border border-light p-5">
+  <h4 class="card-header">Veuillez vous identifiez</h4>
+  <div class="card-body">
+<form class="text-center border border-light p-5" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <!-- username -->
+  <input type="username" formControlName="username" id="defaultLoginFormUsername" class="form-control mb-4" placeholder="Nom d'utilisateur">
+
+  <!-- Password -->
+  <input type="password" formControlName="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Mot de passe">
+
+  <button class="btn btn-info btn-block my-4" type="submit">S'IDENTIFIER</button>
+
+</form>
+<!-- Default form login -->
+  </div>
+</div>
+

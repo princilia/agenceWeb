@@ -1,0 +1,54 @@
+<div  class="text-center border border-light p-5">
+
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Les Utilisateurs </h3>
+
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+        <tr>
+          <th class="text-center">Nom </th>
+          <th class="text-center">Nom d'utilisateur</th>
+          <th class="text-center">Email</th>
+          <th class="text-center">Label </th>
+          <th class="text-center">Role</th>
+          <th class="text-center">Mise à Jour</th>
+          <th class="text-center">Remove</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- This is our clonable table line -->
+        <tr *ngFor="let user of userlist">
+          <td class="pt-3-half" contenteditable="true">{{user.nom}}</td>
+          <td class="pt-3-half" contenteditable="true">{{user.username}}</td>
+          <td class="pt-3-half" contenteditable="true">{{user.email}}</td>
+          <td class="pt-3-half" contenteditable="true">{{user.userGroupeDTO.label}}</td>
+          <td class="pt-3-half" contenteditable="true">{{user.userRolesDTO.role}}</td>
+          <td class="pt-3-half">
+
+            <span class="table-up"><button type="button" class="btn btn-success">Update</button></span>
+          </td>
+          <td>
+              <span class="table-remove"><button type="button"
+                                                 class="btn btn-danger btn-rounded btn-sm my-0" (click)="deleteUser(user.id)">Remove</button></span>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+
+<p>Pas encore enregister?
+  <a routerLink="registre" (click)="enregistrer()">Register</a>
+
+</p>
+
+<!--<ul>-->
+<!--  <li *ngFor="let user of users">-->
+<!--    {{user.username}} ({{user.firstName}} {{user.lastName}})-->
+<!--    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!-- Table with panel -->

@@ -1,0 +1,28 @@
+<div class="container">
+  <div id="html">
+    <button data-toggle="modal" data-target="#formulaire3" class="btn btn-primary">Ajouter Role</button>
+  </div>
+  <div class="modal fade" id="formulaire3">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Ajout Role :</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body row pt-5" >
+          <form class="col" [formGroup]="roleForm" (ngSubmit)="onSubmit(roleForm)">
+            <div class="form-group">
+              <input type="text" class="form-control" name ="label" id="label1" placeholder="label Role">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="description" id="Description1" placeholder="Description">
+            </div>
+            <button type="submit" class="btn btn-primary pull-right">Enregistrer</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

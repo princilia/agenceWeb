@@ -1,0 +1,59 @@
+<app-page></app-page>
+<div class="text-center border border-light p-5">
+  <h4 class="card-header">Enregistrer un client</h4>
+  <div class="card-body">
+<form  [formGroup]="cliForm" class="text-center border border-light p-5" (ngSubmit)="onSubmit(cliForm)">
+
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control" formControlName="numeroCli" id="defaultCliFormNumeroCli" placeholder="Numéro du Client" required>
+
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" formControlName="nom" id="defaultCliFormNom"  placeholder="Nom"
+      >
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <input type="text" class="form-control" formControlName="prenom" id="defaultCliFormPrenom" placeholder="Prenom"
+             >
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+        </div>
+        <input type="text" class="form-control" formControlName="email" id="defaultCliFormEmail" placeholder="Email"
+               aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <input type="text" class="form-control" formControlName="adresse" id="defaultCliFormAdresse" placeholder="adresse" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <input type="text" class="form-control"formControlName="telephone" id="defaultCliFormTelephone" placeholder="telephone" required>
+      <div class="invalid-feedback">
+      </div>
+      <div class="invalid-feedback"> Please provide a valid state.
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-sm" type="submit">Enregistrer Client</button>
+</form>
+  </div>
+</div>

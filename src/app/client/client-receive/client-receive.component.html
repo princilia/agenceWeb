@@ -1,0 +1,48 @@
+
+<button class="btn peach-gradient"  (click)="redirectpaquet()">Services Paquets</button>
+<button class="btn purple-gradient" (click)="redirectclient()">Services Clients</button>
+<button class="btn blue-gradient" (click)="redirectUtilisateur()">Services Employés </button>
+<div class="text-center border border-light p-5">
+
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Mise à jour Client </h3>
+  <div class="card-body" >
+<!--    <button type="button" class="btn btn-primary">ADD CLIENTS</button>-->
+    <div id="table" class="table-editable">
+      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+        <tr>
+
+          <th class="text-center">Numéro Client</th>
+          <th class="text-center">Nom Client</th>
+          <th class="text-center">Prenom Client</th>
+          <th class="text-center">Email</th>
+          <th class="text-center">Adresse</th>
+          <th class="text-center">Téléphone</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- This is our clonable table line -->
+        <tr *ngFor="let client of cliList">
+
+          <td class="pt-3-half" contenteditable="true">{{client.numeroCli}}</td>
+          <td class="pt-3-half" contenteditable="true">{{client.nom}}</td>
+          <td class="pt-3-half" contenteditable="true">{{client.prenom}}</td>
+          <td class="pt-3-half" contenteditable="true">{{client.email}}</td>
+          <td class="pt-3-half" contenteditable="true">{{client.adresse}}</td>
+          <td class="pt-3-half" contenteditable="true">{{client.telephone}}</td>
+<!--          <td class="pt-3-half">-->
+
+<!--            <span class="table-up"><button type="button" class="btn btn-success">Update</button></span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--              <span class="table-remove"><button type="button"-->
+<!--                                                 class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>-->
+<!--          </td>-->
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

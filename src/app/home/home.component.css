@@ -1,0 +1,47 @@
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sidebar-container .mat-drawer {
+  min-width: 200px;
+}
+
+.sidebar-container .mat-drawer .mat-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+.spacer {
+  flex: 1 1 auto
+}
+
+.mat-toolbar-row {
+  color: white;
+  background: #90BC19;
+}
+
+.mat-toolbar-row .btncolor {
+  color:white;
+  background: none;
+}
+
+.mat-toolbar-item {
+  font-size: 18px;
+  cursor: pointer;
+}

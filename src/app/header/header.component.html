@@ -1,0 +1,112 @@
+
+
+<!--&lt;!&ndash;&lt;!&ndash; main app container &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;  <router-outlet></router-outlet>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash; Main navigation &ndash;&gt;&ndash;&gt;-->
+<!--<header>-->
+<!--  &lt;!&ndash; Navbar &ndash;&gt;-->
+<!--  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top scrolling-navbar">-->
+<!--      <a class="navbar-brand" href="#"></a>-->
+<!--      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+
+<!--        <ul class="navbar-nav mr-auto smooth-scroll">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a [ngClass]="{rout:!isroute()}" routerLink="home"  class="nav-link" > Accueil-->
+<!--                       <span class="sr-only">(current)</span>-->
+<!--                      </a>-->
+<!--                    </li>-->
+<!--          <a class="nav-item nav-link" (click)="logout()">Se Déconnecter</a>-->
+
+<!--          <li class="nav-item" >-->
+<!--            <a [ngClass]="{rout:!isroute()}" routerLink="user" class="nav-link" data-offset="90">Se Connecter</a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--        <ul class="navbar-nav mr-auto smooth-scroll">-->
+<!--          <li class="nav-item">-->
+<!--            <a [ngClass]="{rout:!isroute()}"  routerLink="user-admin" class="nav-link"  data-offset="90">Utilisateurs Services</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a [ngClass]="{rout:!isroute()}"  routerLink="paquets" class="nav-link" data-offset="90">Paquets Services</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" [ngClass]="{rout:!isroute()}"  routerLink="client-send" data-offset="30">Mise à jour Clients</a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link" [ngClass]="{rout:!isroute()}"  routerLink="listpaquets" data-offset="90">Mise à jour Paquets</a>-->
+<!--          <li class="nav-item">-->
+<!--          <a class="nav-link"  [ngClass]="{rout:!isroute()}"  routerLink="page" data-offset="90">Page</a>-->
+<!--        </li>-->
+<!--        </ul>-->
+<!--        &lt;!&ndash; Social Icon  &ndash;&gt;-->
+<!--        <div [hidden]="!isroute()"  >-->
+<!--          <ul class="navbar-nav nav-flex-icons">-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link">-->
+<!--                <i class="fab fa-facebook-f light-green-text-2"></i>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link">-->
+<!--                <i class="fab fa-twitter light-green-text-2"></i>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a class="nav-link">-->
+<!--                <i class="fas fa-instagram light-green-text-2"></i>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--  </nav>-->
+<!--  &lt;!&ndash; Navbar &ndash;&gt;-->
+<!--  &lt;!&ndash; Full Page Intro &ndash;&gt;-->
+
+<!--  <div class="view" [hidden]="!isroute()">-->
+<!--    <video class="video-intro" poster="https://mdbootstrap.com/img/Photos/Others/background.jpg" playsinline autoplay muted loop>-->
+<!--      <source src="https://mdbootstrap.com/img/video/animation.mp4" type="video/mp4">-->
+<!--    </video>-->
+<!--    &lt;!&ndash; Mask & flexbox options&ndash;&gt;-->
+<!--    <div class="mask rgba-gradient align-items-center">-->
+<!--      &lt;!&ndash; Content &ndash;&gt;-->
+<!--      <div class="container px-md-3 px-sm-0">-->
+<!--        &lt;!&ndash;Grid row&ndash;&gt;-->
+<!--        <div class="row wow fadeIn">-->
+<!--          &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--          <div class="col-md-12 mb-4 white-text text-center wow fadeIn">-->
+<!--            <h3 class="display-3 font-weight-bold white-text mb-0 pt-md-5 pt-5">Welkom Agency Soeur</h3>-->
+<!--            <hr class="hr-light my-4 w-75">-->
+<!--            <h4 class="subtext-header mt-2 mb-4">Gère du fret maritime qui permet aux utilisateurs d'améliorer la planification et l'organisation des transports des marchandises entrant et sortant de leurs clients</h4>-->
+<!--            <a href="#!" class="btn btn-rounded btn-outline-white">-->
+<!--              <i class="fas fa-home"></i> Visit us-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          &lt;!&ndash;Grid column&ndash;&gt;-->
+<!--        </div>-->
+<!--        &lt;!&ndash;Grid row&ndash;&gt;-->
+<!--      </div>-->
+<!--      &lt;!&ndash; Content &ndash;&gt;-->
+<!--    </div>-->
+<!--    &lt;!&ndash; Mask & flexbox options&ndash;&gt;-->
+<!--  </div>-->
+<!--  &lt;!&ndash; Full Page Intro &ndash;&gt;-->
+<!--</header>-->
+<!--&lt;!&ndash; Main navigation &ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;Main Layout&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;<main>&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="container">&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;Grid row&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="row py-5">&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash;Grid column&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;      <div class="col-md-12 text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      &lt;!&ndash;Grid column&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    &lt;!&ndash;Grid row&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;</main>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;Main Layout&ndash;&gt;&ndash;&gt;-->

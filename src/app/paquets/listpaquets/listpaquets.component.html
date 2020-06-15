@@ -1,0 +1,57 @@
+<app-page></app-page>
+<div class="text-center border border-light p-5">
+
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Service Paquets </h3>
+<!--  <div class="card-body" >-->
+<!--    <div id="table" class="table-editable">-->
+<!--      <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i-->
+<!--        class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>-->
+    <table class="table table-bordered table-responsive-md table-striped text-center">
+        <thead>
+        <tr>
+
+          <th class="text-center">Client Envoie</th>
+          <th class="text-center">Client Receptionné</th>
+          <th class="text-center">numeropack</th>
+          <th class="text-center">Description</th>
+          <th class="text-center">Volume</th>
+          <th class="text-center">Chargement</th>
+          <th class="text-center">Etat Payement</th>
+          <th class="text-center">Date Arrivée </th>
+          <th class="text-center">Date Envoie </th>
+          <th class="text-center">Date Receptionnée</th>
+          <th class="text-center">Destination</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!-- This is our clonable table line -->
+        <tr *ngFor="let paquets of pqList">
+          <td class="pt-3-half" contenteditable="true">{{paquets.clientEnvoie.nom}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.clientReceptionne.nom}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.numeropack}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.description}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.volume}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.chargement}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.etatPaye}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.dateArriver}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.dateEnvoie}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.dateReception}}</td>
+          <td class="pt-3-half" contenteditable="true">{{paquets.destination}}</td>
+
+
+<!--            <span class="table-up"><button type="button" class="btn btn-success">Update</button></span>-->
+<!--          </td>-->
+<!--          <td>-->
+<!--              <span class="table-remove"><button type="button"-->
+<!--                                                 class="btn btn-danger btn-rounded btn-sm my-0">Remove</button></span>-->
+<!--          </td>-->
+<!--        </tr>-->
+
+
+        <!-- This is our clonable table line -->
+
+        </tbody>
+      </table>
+    </div>
+

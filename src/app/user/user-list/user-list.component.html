@@ -1,0 +1,61 @@
+<!-- Default form register -->
+<app-page></app-page>
+
+<div class="text-center border border-light p-5">
+  <h4 class="card-header">Liste des utilisateurs</h4>
+  <div class="card-body">
+<table class="table table-striped table-bordered table-sm">
+  <thead>
+
+  <tr>
+    <th class="th-sm" >Nom
+    </th>
+    <th class="th-sm">Nom d'utilisateur
+    </th>
+    <th class="th-sm">Email
+    </th>
+
+    <th class="th-sm" >Groupe
+    </th>
+
+<!--    <th class="th-sm" >Role-->
+<!--    </th>-->
+
+    <th class="th-sm" >date  début
+    </th>
+
+    <th class="th-sm" >date fin
+    </th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of userlist">
+    <td>{{user.nom}}</td>
+    <td>{{user.username}}</td>
+    <td>{{user.email}}</td>
+    <td *ngFor="let ug of user.userGroupeDTO">{{[ug.label]}}</td>
+<!--    <td *ngFor="let role of user.userRolesDTO">{{role.label}}</td>-->
+    <td *ngFor="let ur of user.userRolesDTO">{{ur.dateDeb}}</td>
+
+    <td *ngFor="let ur of user.userRolesDTO">{{ur.dateFin}}</td>
+
+  </tr>
+  </tbody>
+</table>
+<!--  <h5>Liste de utilisateurs:</h5>-->
+<!--  <div *ngFor="let user of userlist">-->
+<!--    <ul>-->
+<!--    <li>{{user.iduser}}</li>-->
+
+<!--      <li>{{user.nom}}</li>-->
+
+<!--      <li>{{user.username}}</li>-->
+
+<!--      <li>{{user.email}}</li>-->
+
+<!--      <li>{{user.password}}</li>-->
+
+<!--    </ul>-->
+<!--  </div>-->
+
